@@ -1,0 +1,139 @@
+.App {
+  text-align: center;
+}
+
+/* Logo */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* Animation rotation logo */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin 20s linear infinite;
+  }
+}
+
+/* Header */
+.App-header {
+  background-color: #f6c2fd;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* Link */
+.App-link {
+  color: #61dafb;
+}
+
+/* Keyframes rotation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ✨ Texte Lavender amélioré */
+.lavender-text {
+  color: #c615de;
+  font-style: italic;
+  animation: glow 2s ease-in-out infinite alternate,
+             float 3s ease-in-out infinite;
+}
+
+/* Glow effect */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #c615de;
+  }
+  to {
+    text-shadow: 0 0 20px #c615de, 0 0 30px #e38cf5;
+  }
+}
+
+/* Petit mouvement fluide */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.lavender-text:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+ .lavender-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background-color: #4CAF50;
+  transition: width 0.4s ease;
+}
+
+.lavender-text:hover::after {
+  width: 100%;
+} 
+.logo-anim {
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} 
+/* Card container animation */
+
+/* Slide-in from left + fade */
+.row.mb-4 {
+  animation: slideFadeIn 1s ease forwards;
+  opacity: 0; /* start invisible */
+}
+
+@keyframes slideFadeIn {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Optional: gentle floating after appearing */
+.row.mb-4.animate-float {
+  animation: floatRow 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatRow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

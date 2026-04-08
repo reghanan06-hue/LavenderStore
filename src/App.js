@@ -36,7 +36,6 @@ import Apothecary from './pages/Apothecary'
     className="nav-link text-dark"
     to="/shop"
     style={{
-      color:"#1B1C1A",
       color: window.location.pathname === "/shop" ? "#1B1C1A" : "#477f10",
       fontWeight: window.location.pathname === "/story" ? "bold" : "normal",
       transition: "color 0.2s"
@@ -45,7 +44,7 @@ import Apothecary from './pages/Apothecary'
       setTimeout(() => {
         const el = document.getElementById("shop");
         if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 50); // petit délai pour attendre que le composant soit rendu
+      }, 70); // petit délai pour attendre que le composant soit rendu
     }}
   >
     Shop
@@ -205,6 +204,7 @@ import Apothecary from './pages/Apothecary'
 <div >
 
 </div>
+
       </div>
 
     </Router>

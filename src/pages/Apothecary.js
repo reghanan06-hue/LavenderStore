@@ -26,10 +26,12 @@ export default function Apothecary() {
                 </a>
               </li>
               <li className="nav-item">
-                <a href="/apothecary" className="nav-link text-dark fw-bold text-decoration-underline">Apothecary</a>
+                <a href="/apothecary" className="nav-link  fw-bold text-decoration-underline"
+                 style={{color: "#6A5188"}}>Apothecary</a>
               </li>
               <li className="nav-item">
-                <a href="wellness" className="nav-link text-dark">Wellness</a>
+                <a href="wellness" className="nav-link text-dark"
+                 style={{color: "#6A5188"}}>Wellness</a>
               </li>
               <li className="nav-item">
                 <a href="/decor" className="nav-link text-dark">Decor</a>

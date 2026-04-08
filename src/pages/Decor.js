@@ -8,7 +8,7 @@ export default function Decor() {
 
   return (
     <div className="d-flex justify-content-center">
-      <div className="container mt-4" id="shop">
+      <div className="container mt-4" id="decor" >
 
         {/* Header */}
         <div className="row mb-4">
@@ -27,19 +27,22 @@ export default function Decor() {
               <li className="nav-item">
                 <Link to="/apothecary" className="nav-link text-dark">
                   Apothecary
+      
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/wellness" className="nav-link text-dark">
+                <Link to="/wellness" className="nav-link text-dark ">
                   Wellness
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
                   to="/decor"
-                  className="nav-link text-dark fw-bold text-decoration-underline"
-                >
+                  className="nav-link fw-bold text-decoration-underline"
+                  style={{color: "#6A5188",}}
+               >
                   Decor
+                               
                 </Link>
               </li>
             </ul>
@@ -58,25 +61,26 @@ export default function Decor() {
               style={{ borderRadius: "18px" }}
               alt="bouquet"
             />
-            <p style={{ color: "#6A5188", marginLeft: "8px", marginBottom: "0px" }}>
+            <p  style={{ color: "#6A5188", marginLeft: "18px", marginBottom: "0px",alignItems:"center" }}>
               Decor
             </p>
 
-            <div className="d-flex align-items-center justify-content-between">
-              <h5>Dried Lavender Bouquet</h5>
+            <div className="d-flex align-items-center justify">
+              <h5 style={{  marginLeft: "18px", marginBottom: "0px" }}>Dried Lavender Bouquet</h5>
               <button
                 className="btn rounded-circle d-flex align-items-center justify-content-center p-0"
                 style={{
                   width: "40px",
                   height: "40px",
                   backgroundColor: "#f5edf7",
+                  marginLeft: "14px" 
                 }}
               >
-                <img src="./icon-buy.png" alt="icon" style={{ width: "20px" }} />
+                <img src="./icon-buy.png" alt="icon" style={{ width: "20px"}} />
               </button>
             </div>
 
-            <p style={{ color: "#4A454E" }}>20$</p>
+            <p style={{ color: "#4A454E" , marginLeft: "18px", marginBottom: "0px" }}>20$</p>
           </div>
 
           {/* Produit 2 */}
@@ -107,7 +111,7 @@ export default function Decor() {
               </button>
             </div>
 
-            <p style={{ color: "#4A454E" }}>100$</p>
+            <p style={{ color: "#4A454E" }}>17$</p>
           </div>
 
           {/* Produit 3 */}
@@ -138,7 +142,7 @@ export default function Decor() {
               </button>
             </div>
 
-            <p style={{ color: "#4A454E" }}>100$</p>
+            <p style={{ color: "#4A454E" }}>10$</p>
           </div>
 
         </div>

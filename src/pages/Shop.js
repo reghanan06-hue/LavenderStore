@@ -22,7 +22,8 @@ export default function Shop() {
         <div className="col-md-6">
           <ul className="nav justify-content-md-end">
             <li className="nav-item">
-              <Link to="/shop" className="nav-link text-dark fw-bold text-decoration-underline">
+              <Link to="/shop" className="nav-link  fw-bold text-decoration-underline"
+               style={{color: "#6A5188"}}>
                 All Products
               </Link>
             </li>
@@ -189,7 +190,7 @@ export default function Shop() {
 
             <p style={{ color: "#6A5188", marginLeft:"8px",marginBottom:"0px"}}>Decor</p>
             <div className="d-flex align-items-center" style={{ gap: "40px" }}>
-              <h5 className="mb-0">lavender Candle </h5>
+              <h5 className="mb-0">Lavender Candle </h5>
               <button className="btn rounded-circle d-flex align-items-center justify-content-center p-0" style={{ width: "40px", height: "40px", backgroundColor: "#f5edf7" }}>
                 <img src="./icon-buy.png" alt="icon" style={{ width: "20px" }} />
               </button>

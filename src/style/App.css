@@ -137,3 +137,70 @@
     transform: translateY(0);
   }
 }
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  transition: 0.3s;
+}
+
+.icon-circle:hover {
+  background-color: #eee;
+  cursor: hand;
+}
+.zoom-in {
+  animation: zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+.zoom-img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zoom-img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+.animated-frame {
+  display: inline-block;
+  padding: 0px;              /* espace entre image et cadre */
+  border: 3px solid #6A5188; /* couleur de base */
+  border-radius: 25px;
+  animation: colorChange 4s infinite; /* animation continue */
+}
+
+.animated-frame img {
+  display: block;
+  /* border-radius: 20px; */
+        border-Radius: "25px";
+
+  width: 300px;   /* ajuste selon besoin */
+  height: auto;
+}
+
+/* Animation du cadre qui change de couleur */
+@keyframes colorChange {
+  0%   { border-color: #6A5188; }
+  25%  { border-color: #ed1bcd; }
+  50%  { border-color: #de0eec; }
+  75%  { border-color: #51cde3; }
+  100% { border-color: #6A5188; }
+}

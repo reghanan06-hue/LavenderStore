@@ -84,38 +84,44 @@ const handleSubmit = async (e) => {
     
   
   return (
-    <div id="story" className="container mt-4">
+    <div id="story" className="container mt-4  " >
       <h1 style={{ color: "#c615de",marginLeft:"54px" }}>Our Story</h1>
       <p style={{ marginLeft: "56px", marginTop:"0px" }}>Lavender Dream</p>
 
       {/* <div className="position-relative"> */}
      
-         <div className="position-relative story-image" style={{ maxWidth: "1000px", margin: "0 auto" }}>
+         <div className="  position-relative story-image"
+          style={{ maxWidth: "1000px", margin: "10 auto" }}>
   
-  {/* IMAGE */}
+  {/* IMAGE   */}
+
+  
   <img 
     src="./test.png"
     className="w-100 "
     alt="lavender"
     style={{
-      height: "900px",
+      height: "754px",
       objectFit: "fill",
-      borderRadius: "20px",
+      borderRadius: "25px",
 
     }}
   />
 
-  {/* TEXT OVER IMAGE */}
+  {/* TEXT OVER IMAGE   */}
   <div
-    className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+  className="  animated-frame position-absolute top-0 start-0 w-200 h-200 d-flex 
+    align-items-center justify-content-center"
   >
     <div
       style={{
         width: "98%",
-        height: "30%",
-        backgroundColor: "rgba(255,255,255,0.7)",
-        padding: "5px",
-        marginTop:"10px",
+        height: "25%",
+        // backgroundColor: "rgba(255,255,255,0.7)",
+        backgroundColor: "rgba(255,255,255,0.5)" , // moitié transparent
+padding: "80mm 4mm 4mm 4mm",   
+ margin:"20px ",
+
         borderRadius: "15px",
         overflowY: "auto",
         color: "#4A454E"
@@ -158,7 +164,7 @@ Discover our collection and experience the calming power of lavender — natural
 
   {comments.map((c) => (
   <div key={c.id} style={{ padding: "10px 0" }}>
-    <p style={{ margin: 0 }}>{c.message}</p>   {/* affiche le texte du commentaire */}
+    <p style={{ margin: 0 }}>{c.text}</p>   {/* affiche le texte du commentaire */}
     <p style={{ margin: "0 0 5px 0", color:"#6A5188" }}>— {c.name}</p>  {/* affiche le nom */}
     <hr />
   </div>

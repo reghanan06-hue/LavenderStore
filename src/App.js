@@ -9,6 +9,10 @@ import { Carousel } from 'react-bootstrap';
 import 'animate.css';
 import Decor from './pages/Decor';
 import Apothecary from './pages/Apothecary'
+import Footer from './pages/Footer';
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import ServiceTerms from "./pages/ServiceTerms";
+
   function App() {
   return (
     <Router>
@@ -96,12 +100,9 @@ import Apothecary from './pages/Apothecary'
             </ul>
 
             {/* Right Side (Icons / Profile) */}
-            <div className="d-flex gap-3">
-              {/* <span>🛍️</span> */}
-              {/* <span>👤</span> */}
- <img src="/user.png" alt="logo" width="30" /> 
-            </div>
-
+           <div className="d-flex gap-3">
+  <img src="/user.png" alt="logo" className="zoom-img" width="30" />
+</div>
           </div>
         </div>
 
@@ -159,7 +160,7 @@ import Apothecary from './pages/Apothecary'
   <img
           src="/imag3.png"
       className="d-block w-10"
-            style={{ height: "550px", width: "100%", objectFit: "cover" }}
+            style={{ height: "500px", width: "100%", objectFit: "cover" }}
 />
           </Carousel.Item>
  <Carousel.Item>
@@ -186,7 +187,9 @@ import Apothecary from './pages/Apothecary'
 />
           </Carousel.Item>
        </Carousel>
+ 
   
+ 
 
         {/* Routes */}
         <Routes>
@@ -197,12 +200,17 @@ import Apothecary from './pages/Apothecary'
           <Route path="/wellness" element={<Wellness />} />
           <Route path="/decor" element={<Decor />} />
           <Route path="/apothecary" element={<Apothecary />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/service-terms" element={<ServiceTerms />} />
+
 
           {/* Optionnel : rediriger la racine vers Shop */}
           <Route path="/" element={<Shop />} />
         </Routes>
 <div >
+          <div style={{backgroundColor:"#c615de", height:4}}></div>
 
+  <Footer/>
 </div>
 
       </div>

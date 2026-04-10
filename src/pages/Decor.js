@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Decor() {
@@ -67,17 +68,9 @@ export default function Decor() {
 
             <div className="d-flex align-items-center justify">
               <h5 style={{  marginLeft: "18px", marginBottom: "0px" }}>Dried Lavender Bouquet</h5>
-              <button
-                className="btn rounded-circle d-flex align-items-center justify-content-center p-0"
-                style={{
-                  width: "40px",
-                  height: "40px",
-                  backgroundColor: "#f5edf7",
-                  marginLeft: "14px" 
-                }}
-              >
-                <img src="./icon-buy.png" alt="icon" style={{ width: "20px"}} />
-              </button>
+              <div className="icon-circle">
+  <FaShoppingCart />
+</div>
             </div>
 
             <p style={{ color: "#4A454E" , marginLeft: "18px", marginBottom: "0px" }}>20$</p>
@@ -99,16 +92,9 @@ export default function Decor() {
 
             <div className="d-flex align-items-center justify-content-between">
               <h5 className="mb-0">Lavender Candle</h5>
-              <button
-                className="btn rounded-circle d-flex align-items-center justify-content-center p-0"
-                style={{
-                  width: "40px",
-                  height: "40px",
-                  backgroundColor: "#f5edf7",
-                }}
-              >
-                <img src="./icon-buy.png" alt="icon" style={{ width: "20px" }} />
-              </button>
+             <div className="icon-circle">
+  <FaShoppingCart />
+</div>
             </div>
 
             <p style={{ color: "#4A454E" }}>17$</p>
@@ -128,18 +114,11 @@ export default function Decor() {
               Decor
             </p>
 
-            <div className="d-flex align-items-center justify-content-between">
-              <h5>Potted Lavender</h5>
-              <button
-                className="btn rounded-circle d-flex align-items-center justify-content-center p-0"
-                style={{
-                  width: "40px",
-                  height: "40px",
-                  backgroundColor: "#f5edf7",
-                }}
-              >
-                <img src="./icon-buy.png" alt="icon" style={{ width: "20px" }} />
-              </button>
+<div className="d-flex align-items-center gap-4">
+              <h5 className="mb-0">Potted Lavender</h5>
+             <div className="icon-circle">
+  <FaShoppingCart />
+</div>
             </div>
 
             <p style={{ color: "#4A454E" }}>10$</p>

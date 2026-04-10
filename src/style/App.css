@@ -2,81 +2,32 @@
   text-align: center;
 }
 
-/* Logo */
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-/* Animation rotation logo */
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin 20s linear infinite;
-  }
-}
-
 /* Header */
 .App-header {
   background-color: #f6c2fd;
-  min-height: 100vh;
+  min-height: 200vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-/* Link */
-.App-link {
-  color: #61dafb;
-}
-
-/* Keyframes rotation */
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* ✨ Texte Lavender amélioré */
+/* Texte animé */
 .lavender-text {
   color: #c615de;
   font-style: italic;
+  position: relative;
   animation: glow 2s ease-in-out infinite alternate,
              float 3s ease-in-out infinite;
+  transition: transform 0.3s;
 }
 
-/* Glow effect */
-@keyframes glow {
-  from {
-    text-shadow: 0 0 5px #c615de;
-  }
-  to {
-    text-shadow: 0 0 20px #c615de, 0 0 30px #e38cf5;
-  }
-}
-
-/* Petit mouvement fluide */
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 .lavender-text:hover {
   transform: scale(1.1);
-  transition: 0.3s;
 }
- .lavender-text::after {
+
+/* underline animé */
+.lavender-text::after {
   content: "";
   position: absolute;
   left: 0;
@@ -89,54 +40,20 @@
 
 .lavender-text:hover::after {
   width: 100%;
-} 
-.logo-anim {
-  animation: spin 6s linear infinite;
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} 
-/* Card container animation */
-
-/* Slide-in from left + fade */
-.row.mb-4 {
-  animation: slideFadeIn 1s ease forwards;
-  opacity: 0; /* start invisible */
+/* animations */
+@keyframes glow {
+  from { text-shadow: 0 0 5px #c615de; }
+  to { text-shadow: 0 0 20px #c615de, 0 0 30px #e38cf5; }
 }
 
-@keyframes slideFadeIn {
-  0% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
-/* Optional: gentle floating after appearing */
-.row.mb-4.animate-float {
-  animation: floatRow 4s ease-in-out infinite alternate;
-}
-
-@keyframes floatRow {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
+/* icons */
 .icon-circle {
   width: 40px;
   height: 40px;
@@ -145,30 +62,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #333;
   transition: 0.3s;
 }
 
 .icon-circle:hover {
   background-color: #eee;
-  cursor: hand;
-}
-.zoom-in {
-  animation: zoomIn 0.5s ease;
+  cursor: pointer; /* ✅ corrigé */
 }
 
-@keyframes zoomIn {
-  from {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-
+/* image zoom */
 .zoom-img {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -178,29 +80,70 @@
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-
+/* cadre animé */
 .animated-frame {
   display: inline-block;
-  padding: 0px;              /* espace entre image et cadre */
-  border: 3px solid #6A5188; /* couleur de base */
+  border: 4px solid #6A5188;
   border-radius: 25px;
-  animation: colorChange 4s infinite; /* animation continue */
+  animation: colorChange 4s infinite;
 }
 
 .animated-frame img {
   display: block;
-  /* border-radius: 20px; */
-        border-Radius: "25px";
-
-  width: 300px;   /* ajuste selon besoin */
-  height: auto;
+  border-radius: 25px; /* ✅ corrigé */
+  width: 300px;
 }
 
-/* Animation du cadre qui change de couleur */
+/* animation cadre */
 @keyframes colorChange {
   0%   { border-color: #6A5188; }
   25%  { border-color: #ed1bcd; }
   50%  { border-color: #de0eec; }
   75%  { border-color: #51cde3; }
   100% { border-color: #6A5188; }
+}
+
+.icon-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+    color: #c615de;
+
+}
+
+.icon-circle:hover {
+  transform: scale(1.3);
+}
+/* MENU NAVBAR FIX */
+li {
+  position: relative; /* ✅ important */
+  list-style: none;  color: rgb(214, 50, 50);
+
+}
+
+li a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* underline animé */
+li::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #cc4be6;
+  transition: width 0.3s ease;
+}
+
+/* hover */
+li:hover a {
+  color: #cc4be6;
+}
+
+li:hover::after {
+  width: 80%;
 }

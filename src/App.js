@@ -12,6 +12,7 @@ import Apothecary from './pages/Apothecary'
 import Footer from './pages/Footer';
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ServiceTerms from "./pages/ServiceTerms";
+import { FaUser } from 'react-icons/fa';
 
   function App() {
   return (
@@ -37,13 +38,9 @@ import ServiceTerms from "./pages/ServiceTerms";
       
 <li className="nav-item">
   <Link
-    className="nav-link text-dark"
+    className=" link-shop nav-link text-dark"
     to="/shop"
-    style={{
-      color: window.location.pathname === "/shop" ? "#1B1C1A" : "#477f10",
-      fontWeight: window.location.pathname === "/story" ? "bold" : "normal",
-      transition: "color 0.2s"
-    }}
+   
     onClick={() => {
       setTimeout(() => {
         const el = document.getElementById("shop");
@@ -60,11 +57,7 @@ import ServiceTerms from "./pages/ServiceTerms";
   <Link
     className="nav-link text-dark"
     to="/story"
-    style={{
-      color: window.location.pathname === "/story" ? "#1B1C1A" : "#6A5188",
-      fontWeight: window.location.pathname === "/story" ? "bold" : "normal",
-      transition: "color 0.2s"
-    }}
+  
     onClick={() => {
       setTimeout(() => {
         const el = document.getElementById("story");
@@ -82,11 +75,7 @@ import ServiceTerms from "./pages/ServiceTerms";
   <Link
     className="nav-link text-dark"
     to="/contact"
-    style={{
-      color: window.location.pathname === "/contact" ? "#1B1C1A" : "#9dcd6d",
-      fontWeight: window.location.pathname === "/contact" ? "bold" : "normal",
-      transition: "color 0.2s"
-    }}
+    
     onClick={() => {
       setTimeout(() => {
         const el = document.getElementById("contact");
@@ -100,9 +89,10 @@ import ServiceTerms from "./pages/ServiceTerms";
             </ul>
 
             {/* Right Side (Icons / Profile) */}
-           <div className="d-flex gap-3">
-  <img src="/user.png" alt="logo" className="zoom-img" width="30" />
-</div>
+    
+  <div className="icon-circle">
+    <FaUser />
+  </div>
           </div>
         </div>
 

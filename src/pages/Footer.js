@@ -1,10 +1,16 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FaInstagram, FaGlobe } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaFacebook,
+  FaYoutube,
+  FaTiktok
+} from "react-icons/fa";
+
 export default function Footer() {
   return (
-    <footer className="bg-light py-5 border-top">
-      <div className="container">
+    <footer className="py-5 border-top" style={{ backgroundColor: "#fcfcfc" }}>
+      <div className="container" >
         <div className="row text-center text-md-start">
 
           {/* LEFT */}
@@ -12,6 +18,7 @@ export default function Footer() {
             <h5 className="fw-bold" style={{ fontFamily: "serif" }}>
               Lavender Dream
             </h5>
+
             <p className="text-muted mt-3">
               Dedicated to the art of slowing down and the science of botanical
               well-being. Crafted in small batches from our sustainable estate.
@@ -22,9 +29,21 @@ export default function Footer() {
           <div className="col-md-2 mb-4">
             <h6 className="text-uppercase small fw-bold">Discover</h6>
             <ul className="list-unstyled mt-3">
-              <li><a href="story" className="text-muted text-decoration-none">Our Story</a></li>
-              <li><a href="#" className="text-muted text-decoration-none">The Farm</a></li>
-              <li><a href="#" className="text-muted text-decoration-none">Blog</a></li>
+              <li>
+                <a href="/story" className="text-muted text-decoration-none">
+                  Our Story
+                </a>
+              </li>
+              <li>
+                <a href="/shop" className="text-muted text-decoration-none">
+                  Shop
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-muted text-decoration-none">
+                  Blog
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -32,9 +51,21 @@ export default function Footer() {
           <div className="col-md-3 mb-4">
             <h6 className="text-uppercase small fw-bold">Client Care</h6>
             <ul className="list-unstyled mt-3">
-              <li><a href="privacy-policy" className="text-muted text-decoration-none">Privacy Policy</a></li>
-              <li><a href="service-terms" className="text-muted text-decoration-none">Terms of Service</a></li>
-              <li><a href="#" className="text-muted text-decoration-none">Shipping & Returns</a></li>
+              <li>
+                <a href="/privacy-policy" className="text-muted text-decoration-none">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="/service-terms" className="text-muted text-decoration-none">
+                  Terms of Service
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-muted text-decoration-none">
+                  Shipping & Returns
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -46,8 +77,17 @@ export default function Footer() {
               <div className="icon-circle">
                 <FaInstagram />
               </div>
+
               <div className="icon-circle">
-                <FaGlobe />
+                <FaFacebook />
+              </div>
+
+              <div className="icon-circle">
+                <FaYoutube />
+              </div>
+
+              <div className="icon-circle">
+                <FaTiktok />
               </div>
             </div>
 

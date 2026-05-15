@@ -1,5 +1,7 @@
 
 import React, { useState, useEffect } from "react";
+import "../style/App.css";
+import { Link } from "react-router-dom";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -30,7 +32,8 @@ export default function Contact() {
 
   return (
     <div id="contact" className="container mt-4">
-      <h2 style={{ color: "#6A5188" }}>Login</h2>
+                    <h2 className="animated-text" style={{ color: "#6A5188" }}>
+Login</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label>Name</label>
@@ -57,8 +60,23 @@ export default function Contact() {
           className="btn"
           style={{ backgroundColor: "#c615de", color: "white", marginBottom: "50px" }}
         >
-          Sign in
+         <span> Sign in </span>
         </button>
+        <Link to="/account">
+ <button
+          type="submit"
+          className="btn"
+          // style={{ backgroundColor: "#c615de", color: "white", marginBottom: "50px",marginLeft:"20px" }}
+        >
+         <span> Sign up </span>
+        </button></Link>
+       
+        {/* <button
+          // type="submit"
+          className="btnSignGoogle"
+        >  <span>Sign with Google</span>
+
+        </button> */}
       </form>
     </div>
   );

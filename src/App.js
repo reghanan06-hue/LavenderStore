@@ -1,189 +1,199 @@
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Routes, Route, NavLink ,Link} from "react-router-dom";import Story from './pages/Story';
-import Shop from './pages/Shop'; 
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+import Story from './pages/Story';
+import Shop from './pages/Shop';
 import Contact from './pages/Contact';
 import Wellness from './pages/Wellness';
-import "./style/App.css";
-import { Carousel } from 'react-bootstrap';
-import 'animate.css';
 import Decor from './pages/Decor';
-import Apothecary from './pages/Apothecary'
+import Apothecary from './pages/Apothecary';
+import Account from './pages/Account'
 import Footer from './pages/Footer';
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ServiceTerms from "./pages/ServiceTerms";
+import DetailProduct from "./pages/DetailProduct";
+
+import "./style/App.css";
+import { Carousel } from 'react-bootstrap';
+import 'animate.css';
 import { FaUser } from 'react-icons/fa';
 
-  function App() {
+function App() {
   return (
     <Router>
-      <div style={{ backgroundColor: "#E4E2DE", color:"#1B1C1A" }}>
+      <div style={{ backgroundColor: "#E4E2DE", color: "#1B1C1A" }}>
 
         {/* Navbar */}
         <div className="container-fluid py-3" style={{ backgroundColor: "#fcfcfc" }}>
           <div className="d-flex justify-content-between align-items-center">
 
-            {/* Logo (Left) */}
-            <div style={{ color: "#c615de", fontStyle: "italic", display: 'flex',
-               alignItems: 'center', gap: '10px' }}>
-<img src="/logo.png" alt="logo" width="40" className="logo-anim" />
- <h5 className="animate__animated animate__pulse animate__infinite">
-    Lavender Dream
-  </h5>           
-{/* <img src="/logo.png" alt="logo" width="40" className="logo-anim" /> */}
+            {/* Logo */}
+            <div style={{
+              color: "#c615de",
+              fontStyle: "italic",
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
+            }}>
+              <img src="/logo.png" alt="logo" width="40" className="logo-anim" />
+              <h5 className="animate__animated animate__pulse animate__infinite">
+                Lavender Dream
+              </h5>
             </div>
 
-            {/* Menu (Center) */}
+            {/* Menu */}
             <ul className="nav">
-      
-<li className="nav-item">
-  <Link
-    className=" link-shop nav-link text-dark"
-    to="/shop"
-   
-    onClick={() => {
-      setTimeout(() => {
-        const el = document.getElementById("shop");
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 70); // petit délai pour attendre que le composant soit rendu
-    }}
-  >
-    Shop
-  </Link>
-</li>
-            
-      
-<li className="nav-item">
-  <Link
-    className="nav-link text-dark"
-    to="/story"
-  
-    onClick={() => {
-      setTimeout(() => {
-        const el = document.getElementById("story");
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 50); // petit délai pour attendre que le composant soit rendu
-    }}
-  >
-    Our Story
-  </Link>
-</li>
-              
+              <li className="nav-item">
+                <Link className=" nav-link text-dark" to="/shop">Shop</Link>
+              </li>
 
-      
-<li className="nav-item">
-  <Link
-    className="nav-link text-dark"
-    to="/contact"
-    
-    onClick={() => {
-      setTimeout(() => {
-        const el = document.getElementById("contact");
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 50); // petit délai pour attendre que le composant soit rendu
-    }}
-  >
-    Contact
-  </Link>
-</li>
+              <li className="nav-item">
+                <Link className="nav-link text-dark" to="/story">Our Story</Link>
+              </li>
+
+              <li className="nav-item">
+                <Link className="nav-link text-dark" to="/contact">Contact</Link>
+              </li>
             </ul>
 
-            {/* Right Side (Icons / Profile) */}
-    
-  <div className="icon-circle">
-    <FaUser />
-  </div>
+            {/* Icon */}
+            <div className="icon-circle">
+              <FaUser />
+            </div>
+
           </div>
         </div>
 
         {/* Divider */}
-        <div style={{backgroundColor:"#c615de", height:4}}></div>
+        <div style={{ backgroundColor: "#c615de", height: 4 }}></div>
 
-        {/* Hero Section */}
-        {/* <div className="position-relative">
-          <img src="/farmerLavender.png" alt="Main" className="img-fluid w-100" />
-          <div
-            className="position-absolute"
-            style={{
-              top: "60%",
-              left: "10%",
-              transform: "translateY(-50%)",
-              maxWidth: "400px",
-              color:"#4A454E"
-            }}
-          >
-            <h6>Est. 2024 </h6>
-            <h1 style={{color:"#c615de"}}>Lavender Dream</h1>
-            <p style={{marginLeft:"30px"}}>Lavender for Your Home</p>
-            <p>Elevate your daily rituals with our artisan-grown</p>
-            <p>botanical collection, crafted to bring calm into every</p>
-            <p>corner of your sanctuary.</p>
+        {/* Carousel */}
+        <Carousel>
 
-            <button style={{ borderRadius: '20px', padding: '10px 30px', backgroundColor: '#c615de', color: '#fff' }}>
-              Explore Collection
-            </button>
-          </div> */}
-        {/* </div> */}
+          <Carousel.Item>
+            <div className="position-relative">
+              <img
+                className="d-block w-100"
+                src="/FRi.png"
+                alt="Lavender Dream Collection"
+                style={{ height: "500px", objectFit: "cover" }}
+              />
 
-   
+              {/* Left Text */}
+              <div
+                className="position-absolute text-start"
+                style={{
+                  top: "80%",
+                  left: "5%",
+                  transform: "translateY(-50%)",
+                  color: "#5f076b",
+                }}
+              >
+                <h6 style={{ fontWeight: "200" }}>
+                  WELCOME TO THE WORLD OF
+                </h6>
+                <h3 style={{ fontSize: "55px", lineHeight: "0.9" }}>
+                  LAVENDER <br /> DREAM
+                </h3>
+              </div>
 
-    <Carousel>
-      <Carousel.Item>
-        <img
-      className="d-block w-100"
-          src="/1.png"
-          alt="First slide"
-            style={{ height: "500px", width: "80%", objectFit: "cover" }}
-        />
-      </Carousel.Item>
+              {/* Center Text */}
+              <div
+                className="position-absolute text-center"
+                style={{
+                  bottom: "30px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  color: "#5f076b",
+                 
+           }}
+              >
+                <h6>AN EXCLUSIVE COLLECTION</h6>
+                <h6>FOR BODY & MIND</h6>
+              </div>
 
-      <Carousel.Item>
-        <img
-      className="d-block w-100"
-          src="/imag2.png"
-          alt="Second slide"
-            style={{ height: "500px", width: "100%", objectFit: "cover" }}
-        />
-      </Carousel.Item>
-
-      <Carousel.Item>
-  <img
-          src="/imag3.png"
-      className="d-block w-10"
-            style={{ height: "500px", width: "100%", objectFit: "cover" }}
-/>
+              {/* Right Text */}
+              <div
+                className="position-absolute text-end"
+                style={{
+                  top: "78%",
+                  right: "5%",
+                  transform: "translateY(-50%)",
+                  color: "#b08d57",
+                }}
+              >
+                <h1 style={{ fontSize: "25px" }}>
+                  SPRING 2026 <br /> COLLECTION
+                </h1>
+              </div>
+            </div>
           </Carousel.Item>
+
+          {/* Slides */}
+          {/* <Carousel.Item>
+            <img className="d-block w-100" src="/1.png" alt="slide"
+             style={{ height: "500px", objectFit: "cover" }} />
+          </Carousel.Item> */}
+
+          {/* <Carousel.Item>
+            <img className="d-block w-100" src="/imag2.png" 
+            alt="slide" style={{ height: "500px", objectFit: "cover" }} />
+            <h1>Est. 2024</h1>
+          </Carousel.Item> */}
+<Carousel.Item>
+  <img
+    className="d-block w-100"
+    src="/imag3.png"
+    alt="slide"
+    style={{ height: "500px", objectFit: "cover" }}
+  />
+
+  <Carousel.Caption>
+    
+    <h1 style={{color:"#56035c"}}> EST. 2024</h1>
+
+<p className="animated-textCol"  style={{color:"#f3d0f3",fontWeight: "500" }}>Fresh lavender from our farm, grown with care and harvested at its peak</p>  </Carousel.Caption>
+</Carousel.Item>
+
  <Carousel.Item>
-  <img
-          src="/6.png"
-      className="d-block w-10"
-            style={{ height: "500px", width: "100%", objectFit: "cover" }}
-/>
+            <img className="d-block w-100" src="/imag5.png" alt="slide" 
+            style={{ height: "500px", objectFit: "cover" }} />
+            
+
+
           </Carousel.Item>
-   
-  
-  <Carousel.Item>
-  <img
-          src="/imag4.png"
-      className="d-block w-10"
-            style={{ height: "500px", width: "100%", objectFit: "cover" }}
-/>
+          <Carousel.Item>
+            <img className="d-block w-100" src="/imag2.png" 
+            alt="slide" style={{ height: "500px", objectFit: "cover" }} />
+              <Carousel.Caption>
+
+            <h4 style={{color:"#56035c",alignSelf:"center",
+              fontWeight: "500",marginTop:"20px" ,marginLeft:"50px"}}>
+
+                          NATURE PRODUCTS </h4>
+                    <p className='animated-textCol' style={{color:"#f3d0f3",fontWeight: "500" }}>
+                      Lavender Dream natural products for mind and body</p>
+              </Carousel.Caption>
           </Carousel.Item>
-            <Carousel.Item>
-  <img
-          src="/imag5.png"
-      className="d-block w-10"
-            style={{ height: "500px", width: "100%", objectFit: "cover" }}
-/>
+
+          <Carousel.Item>
+            <img className="d-block w-100" src="/6.png" alt="slide" 
+            style={{ height: "500px", objectFit: "cover" }} />
+            
           </Carousel.Item>
-       </Carousel>
- 
-  
- 
+          <Carousel.Item>
+            <img className="d-block w-100" src="/imag4.png" alt="slide"
+             style={{ height: "500px", objectFit: "cover" }} />
+          </Carousel.Item>
+
+         
+
+
+        </Carousel>
 
         {/* Routes */}
         <Routes>
-
+          <Route path="/" element={<Shop />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/story" element={<Story />} />
           <Route path="/contact" element={<Contact />} />
@@ -192,19 +202,18 @@ import { FaUser } from 'react-icons/fa';
           <Route path="/apothecary" element={<Apothecary />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/service-terms" element={<ServiceTerms />} />
+          <Route path="/product-detail" element={<DetailProduct />} />
+          <Route path="/account" element={<Account />} />
 
-
-          {/* Optionnel : rediriger la racine vers Shop */}
-          <Route path="/" element={<Shop />} />
         </Routes>
-<div >
-          <div style={{backgroundColor:"#c615de", height:4}}></div>
 
-  <Footer/>
-</div>
+        {/* Footer */}
+        <div>
+          <div style={{ backgroundColor: "#c615de", height: 4 }}></div>
+          <Footer />
+        </div>
 
       </div>
-
     </Router>
   );
 }

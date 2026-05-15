@@ -1,0 +1,27 @@
+.myLink {
+  position: relative;
+  text-decoration: none;
+  color: rgb(214, 50, 50);
+  transition: color 0.3s;
+}
+
+/* underline animé */
+.myLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #cc4be6;
+  transition: width 0.3s ease;
+}
+
+/* hover */
+.myLink:hover {
+  color: #cc4be6;
+}
+
+.myLink:hover::after {
+  width: 100%;
+}

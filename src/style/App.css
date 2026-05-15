@@ -34,12 +34,12 @@
   bottom: -5px;
   width: 0;
   height: 3px;
-  background-color: #4CAF50;
+  background-color: #a67df3;
   transition: width 0.4s ease;
 }
 
 .lavender-text:hover::after {
-  width: 100%;
+  width: 90%;
 }
 
 /* animations */
@@ -96,11 +96,34 @@
 
 /* animation cadre */
 @keyframes colorChange {
-  0%   { border-color: #6A5188; }
+  15%   { border-color: #fec5ef; }
   25%  { border-color: #ed1bcd; }
   50%  { border-color: #de0eec; }
   75%  { border-color: #51cde3; }
   100% { border-color: #6A5188; }
+}
+
+@keyframes textColorChange {
+  15%   { color: #fec5ef; }
+  25%   { color: #ed1bcd; }
+  50%   { color: #de0eec; }
+  75%   { color: #51cde3; }
+  100%  { color: #6A5188; }
+}
+
+.animated-text {
+  animation: textColorChange 3s infinite;
+}
+@keyframes txtColorChange {
+  15%   { color: #fec5ef; }
+  25%   { color: #ffffff; }
+  50%   { color: #de0eec; }
+  75%   { color: #51cde3; }
+  100%  { color: #882cf9; }
+}
+
+.animated-textCol {
+  animation: txtColorChange 3s infinite;
 }
 
 .icon-circle {
@@ -115,23 +138,24 @@
 .icon-circle:hover {
   transform: scale(1.3);
 }
-/* MENU NAVBAR FIX */
-li {
-  position: relative; /* ✅ important */
-  list-style: none;  color: rgb(214, 50, 50);
 
-}
-
-li a {
+.nav .nav-link {
+  position: relative;
   text-decoration: none;
-  transition: color 0.3s;
 }
 
-/* underline animé */
-li::after {
-  content: "";
+.nav .nav-link::after {
+  /* content: "";
   position: absolute;
-  left: 10px;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #cc4be6;
+  transition: width 0.3s ease; */
+   content: "";
+  position: absolute;
+  left: 0;
   bottom: 0;
   width: 0;
   height: 2px;
@@ -139,11 +163,112 @@ li::after {
   transition: width 0.3s ease;
 }
 
-/* hover */
-li:hover a {
-  color: #cc4be6;
+.nav .nav-link:hover::after {
+  width: 90%;
 }
 
-li:hover::after {
-  width: 80%;
+.btn {
+  background-color: #cc4be6;
+  color: white;
+  margin-top: 30px;
+  margin-left: 20px;
+   margin-bottom: 50px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* couche animée */
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #da84eb;
+  transition: 0.4s;
+  z-index: 2; /* 🔥 AU-DESSUS */
+}
+
+/* animation */
+.btn:hover::before {
+  width: 100%;
+}
+
+/* texte */
+.btn span {
+  position: relative;
+  z-index: 3; /* 🔥 encore au-dessus */
+  color: #f975ee;
+  transition: 0.4s;
+}
+
+/* couleur texte au hover */
+/* .btnSignGoogle:hover span {
+  color: white;
+} */
+.btn span {
+  mix-blend-mode: difference;
+  color:"black"
+}
+
+.signup-container {
+  /* text-align: center; */
+  margin-top: 20px;
+    margin-bottom: 50px;
+
+}
+
+/* BUTTON */
+.signup-btn {
+  background: linear-gradient(90deg, #7b8dfb, #6A5188);
+  color: white;
+  border: none;
+  padding: 20px 60px;
+  font-size: 18px;
+  letter-spacing: 3px;
+  border-radius: 40px;
+  box-shadow: 0 10px 25px rgba(106, 81, 136, 0.3);
+  cursor: pointer;
+}
+
+/* TEXT */
+.signup-text {
+  margin: 30px 0 15px;
+  font-size: 18px;
+  color: #2b0138;
+}
+
+/* ICONS CONTAINER */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-left: 25px;
+}
+
+/* ICON STYLE */
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #a714e1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.icon:hover {
+  transform: translateY(-5px);
+  background: #6A5188;
 }

@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 export default function PrivacyPolicy() {
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 550, behavior: "smooth" });
   }, []);
 
   return (
@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
       </p>
 
       <section className="mb-4">
-        <h5>1. Information We Collect</h5>
+        <h5 style={{ color: "#2b0239" }}>1. Information We Collect</h5>
         <p>
           We may collect personal information such as your name, email address,
           and any other details you provide when contacting us or using our services.

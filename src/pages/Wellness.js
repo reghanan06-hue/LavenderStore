@@ -1,139 +1,164 @@
 
-
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+
+import { FaShoppingCart } from "react-icons/fa";
 
 export default function Wellness() {
   useEffect(() => {
     // Scroll vers le haut quand cette page est affichée
-    window.scrollTo({ top: 10, behavior: "smooth" });
-  }, []);
+    window.scrollTo({ top:605, behavior: "smooth" });
+  }, [])
 
   return (
-    <div className="d-flex justify-content-center">
-      <div className="container mt-4" id="shop">
-
-        {/* Header */}
-        <div className="row mb-4">
-          <div className="col">
-            <h3>The Signature Edit</h3>
-            <p>Carefully selected essentials for a tranquil life.</p>
-          </div>
-          <div className="col">
-            <ul className="nav">
-              <li className="nav-item">
-                <a href="Shop" className="nav-link text-dark">
-                  All Products
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="apothecary" className="nav-link text-dark">Apothecary</a>
-              </li>
-              <li className="nav-item">
-    <a href="wellness" className="nav-link fw-bold text-decoration-underline"
-     style={{color: "#6A5188"}}>Wellness</a>
-              </li>
-              <li className="nav-item">
-                <a href="decor" className="nav-link text-dark">Decor</a>
-              </li>
-            </ul>
-          </div>
+    <div className="container mt-4 px-4" id="wellness">
+ {/* Header */}
+      <div className="row mb-4 align-items-center">
+        <div className="col-md-6">
+          <h3>The Signature Edit</h3>
+          <p>Carefully selected essentials for a tranquil life.</p>
         </div>
 
+        <div className="col-md-6">
+<ul className="nav justify-content-center">
+            <li className="nav-item">
+              <Link to="/shop" className="nav-link text-dark">
+                All Products
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/apothecary" className="nav-link text-dark">
+                Apothecary
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/wellness" className="nav-link fw-bold "
+               style={{color: "#c615de"}}>
+                Wellness
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/decor" className="nav-link text-dark">
+                Decor
+              </Link>
+            </li>
+          </ul>
+        </div>
         {/* Ligne 1 de produits */}
         <div className="row mb-4">
-          
+         
 
           <div className="col">
             <img src="./huile.png" width="300" height="300" 
                         style={{ borderRadius: "18px" }}/>
 
-            <p style={{ color: "#6A5188", marginTop:"0px",marginBottom:"0px"}}>Wellness</p>
-            <div className="d-flex align-items-center" style={{ gap: "40px" }}>
-              <h5>Lavender Essential Oil</h5>
-              <button className="btn rounded-circle d-flex align-items-center justify-content-center p-0" style={{ width: "40px", height: "40px", backgroundColor: "#f5edf7" }}>
-                <img src="./icon-buy.png" alt="icon" style={{ width: "20px" }} />
-              </button>
+            <p  style={{ color: "#6A5188", marginLeft: "25px", marginBottom: "0px",alignItems:"center" }}>
+              Wellness</p>
+            <div className="d-flex align-items-center justify">
+             <h5 className="mb-0" style={{  marginLeft: "25px", marginBottom: "0px" }}>
+              Lavender Essential Oil</h5>
+               <div className="icon-circle" style={{  marginLeft: "39px", marginBottom: "0px" }}>
+               <FaShoppingCart />
+             </div>
             </div>
-            <p style={{ color: "#4A454E" }}>20$</p>
+           <p style={{ color: "#4A454E" , marginLeft: "25px", marginBottom: "0px" }}>
+            20$</p>
           </div>
-
+   <div className="col">
+            <img src="./lavendewater.png" width="300" height="300" 
+            style={{ borderRadius: "18px" }}/>
+             <p  style={{ color: "#6A5188", marginLeft: "25px", marginBottom: "0px",alignItems:"center" }}>
+              Sleep Ritual</p>
+            <div className="d-flex align-items-center justify">
+               <h5 className="mb-0" style={{  marginLeft: "25px", marginBottom: "0px" }}>Infused Pillow Mist </h5>
+              <div className="icon-circle" style={{  marginLeft: "59px", marginBottom: "0px" }}>
+               <FaShoppingCart />
+             </div>
+            </div>
+           <p style={{ color: "#4A454E" , marginLeft: "25px", marginBottom: "0px" }}>
+              20$</p>
+          </div>
           <div className="col">
             <img src="./parfum.png" width="300" height="300"      
                    style={{ borderRadius: "18px" }}/>
 
-            <p style={{ color: "#6A5188", marginTop: "0" ,marginBottom:"0px"}}>Wellness</p>
-            <div className="d-flex align-items-center" style={{ gap: "40px" }}>
-              <h5>Lavender Essential Oil</h5>
-              <button className="btn rounded-circle d-flex align-items-center justify-content-center p-0" style={{ width: "40px", height: "40px", backgroundColor: "#f5edf7" }}>
-                <img src="./icon-buy.png" alt="icon" style={{ width: "20px" }} />
-              </button>
-            </div>
-            <p style={{ color: "#4A454E" }}>30$</p>
-          </div>
+                      <p  style={{ color: "#6A5188", marginLeft: "25px", marginBottom: "0px",alignItems:"center" }}>
 
-           <div className="col">
+              Wellness</p>
+            <div className="d-flex align-items-center" style={{ gap: "40px" }}>
+               <h5 className="mb-0" style={{  marginLeft: "25px", marginBottom: "0px" }}>Home fragrance</h5>
+               <div className="icon-circle" style={{  marginLeft: "29px", marginBottom: "0px" }}>
+               <FaShoppingCart />
+             </div>
+            </div>
+                      <p style={{ color: "#4A454E" , marginLeft: "25px", marginBottom: "0px" }}>
+ 30$</p>
+          </div>
+        </div>
+
+        {/* Ligne 2 de produits */}
+          
+
+          <div className="col">
             <img src="./Lotion.png" width="300" height="300"          
               style={{ borderRadius: "18px" }}/>
 
-            <p style={{ color: "#6A5188", marginLeft:"8px",marginBottom:"0px"}}>Wellness</p>
+                      <p  style={{ color: "#6A5188", marginLeft: "25px", marginBottom: "0px",alignItems:"center" }}>
+
+              Wellness</p>
             <div className="d-flex align-items-center" style={{ gap: "40px" }}>
-              <h5>Lavender Body Lotion</h5>
-              <button className="btn rounded-circle d-flex align-items-center justify-content-center p-0" style={{ width: "40px", height: "40px", backgroundColor: "#f5edf7" }}>
-                <img src="./icon-buy.png" alt="icon" style={{ width: "20px" }} />
-              </button>
+               <h5 className="mb-0" style={{  marginLeft: "25px", marginBottom: "0px" }}h5>Body Lotion</h5>
+              <div className="icon-circle" style={{  marginLeft: "69px", marginBottom: "0px" }}>
+                <FaShoppingCart />
+              </div>
+
             </div>
-            <p style={{ color: "#4A454E" }}>20$</p>
+           <p style={{ color: "#4A454E" , marginLeft: "25px", marginBottom: "0px" }}>
+              20$</p>
           </div>
-          <div className="col">
-            <img src="./soap2.png" width="300" height="300" 
-            style={{ borderRadius: "18px" }}/>
-            <p style={{ color: "#6A5188",marginTop: "0" ,marginBottom:"0px"}}>Wellness</p>
-            <div className="d-flex align-items-center" style={{ gap: "40px" }}>
-              <h5>Lavender Natural Soap</h5>
-              <button className="btn rounded-circle d-flex align-items-center justify-content-center p-0" style={{ width: "40px", height: "40px", backgroundColor: "#f5edf7" }}>
-                <img src="./icon-buy.png" alt="icon" style={{ width: "20px" }} />
-              </button>
-            </div>
-            <p style={{ color: "#4A454E" }}>10$</p>
-          </div>
- <div className="col">
-            <img src="./lavendewater.png" width="300" height="300" 
-            style={{ borderRadius: "18px" }}/>
-            <p style={{ color: "#6A5188",marginTop: "0" ,marginBottom:"0px"}}>Sleep Ritual</p>
-            <div className="d-flex align-items-center" style={{ gap: "40px" }}>
-              <h5>Infused Pillow Mist</h5>
-              <button className="btn rounded-circle d-flex align-items-center justify-content-center p-0" style={{ width: "40px", height: "40px", backgroundColor: "#f5edf7" }}>
-                <img src="./icon-buy.png" alt="icon" style={{ width: "20px" }} />
-              </button>
-            </div>
-            <p style={{ color: "#4A454E" }}>20$</p>
-          </div>
-          
-              <div className="col">
+<div className="col">
             <img src="./Creme.png" width="300" height="300"          
               style={{ borderRadius: "18px" }}/>
 
-            <p style={{ color: "#6A5188", marginLeft:"8px",marginBottom:"0px"}}>Wellness</p>
+             <p  style={{ color: "#6A5188", marginLeft: "25px", marginBottom: "0px" }}>
+              Wellness</p>
+     <div className="d-flex align-items-center justify">
+    
+                 <h5 className="mb-0" style={{  marginLeft: "25px", marginBottom: "0px" }}> 
+Natural body cream</h5>
+                 <div className="icon-circle"   style={{  marginLeft: "39px", marginBottom: "0px",alignItems:"center" }}>
+                
+      <FaShoppingCart />
+    </div>
+                </div>
+    
+                 <p style={{ color: "#4A454E" , marginLeft: "25px", marginBottom: "0px" }}>10$</p>
+              </div>
+          <div className="col">
+            <img src="./soap2.png" width="300" height="300" 
+            style={{ borderRadius: "18px" }}/>
+             <p  style={{ color: "#6A5188", marginLeft: "25px", marginBottom: "0px",alignItems:"center" }}>
+              Wellness</p>
             <div className="d-flex align-items-center" style={{ gap: "40px" }}>
-              <h5>   Lavender Body cream</h5>
-              <button className="btn rounded-circle d-flex align-items-center justify-content-center p-0" style={{ width: "40px", height: "40px", backgroundColor: "#f5edf7" }}>
-                <img src="./icon-buy.png" alt="icon" style={{ width: "20px" }} />
-              </button>
+               <h5 className="mb-0" style={{  marginLeft: "25px", marginBottom: "0px" }}>Natural Soap</h5>
+              <div className="icon-circle" style={{  marginLeft: "69px", marginBottom: "0px" }}>
+               <FaShoppingCart />
+             </div>
             </div>
-            <p style={{ color: "#4A454E" }}>70$</p>
+           <p style={{ color: "#4A454E" , marginLeft: "25px", marginBottom: "0px" }}>
+              10$</p>
           </div>
 
-        </div>
-        </div>
-
-      
-
-
+        
          
-    
         
         </div>
 
-  
+
+    
+            </div>
+
+        
   );
 }
+

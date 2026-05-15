@@ -6,6 +6,7 @@ import {
   FaYoutube,
   FaTiktok
 } from "react-icons/fa";
+import "../style/Footer.css";
 
 export default function Footer() {
   return (
@@ -30,17 +31,17 @@ export default function Footer() {
             <h6 className="text-uppercase small fw-bold">Discover</h6>
             <ul className="list-unstyled mt-3">
               <li>
-                <a href="/story" className="text-muted text-decoration-none">
+                <a href="/story" className="myLink text-muted text-decoration-none">
                   Our Story
                 </a>
               </li>
               <li>
-                <a href="/shop" className="text-muted text-decoration-none">
+                <a href="/shop" className=" myLink text-muted text-decoration-none">
                   Shop
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted text-decoration-none">
+                <a href="#" className="myLink text-muted text-decoration-none">
                   Blog
                 </a>
               </li>
@@ -52,17 +53,17 @@ export default function Footer() {
             <h6 className="text-uppercase small fw-bold">Client Care</h6>
             <ul className="list-unstyled mt-3">
               <li>
-                <a href="/privacy-policy" className="text-muted text-decoration-none">
+                <a href="/privacy-policy" className="myLink text-muted text-decoration-none">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="/service-terms" className="text-muted text-decoration-none">
+                <a href="/service-terms" className="myLink text-muted">
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted text-decoration-none">
+                <a href="#" className="myLink text-muted text-decoration-none">
                   Shipping & Returns
                 </a>
               </li>
@@ -70,23 +71,36 @@ export default function Footer() {
           </div>
 
           {/* CONNECT */}
-          <div className="col-md-3 mb-4 text-center text-md-start">
-            <h6 className="text-uppercase small fw-bold">Connect</h6>
+          <div className="col-md-3 mb-5 text-center text-md-start">
+                      {/* <div className="col-md-3 mb-5"> */}
+
+            <h6 className="text-uppercase small fw-bold  "
+            >Connect</h6>
 
             <div className="d-flex gap-3 mt-3 justify-content-center justify-content-md-start">
-              <div className="icon-circle">
-                <FaInstagram />
-              </div>
 
-              <div className="icon-circle">
-                <FaFacebook />
+              <div className="icon-circle" onClick={() => window.open("https://www.instagram.com", "_blank")}
+  style={{ cursor: "pointer" }}
+>                <FaInstagram />
               </div>
+<div
+  className="icon-circle"
+  onClick={() => window.open("https://www.facebook.com", "_blank")}
+  style={{ cursor: "pointer" }}
+>
+  <FaFacebook />
+</div>
 
-              <div className="icon-circle">
+              <div className="icon-circle" 
+              onClick={() => window.open("https://www.youtube.com", "_blank")}
+  style={{ cursor: "pointer" }}
+>
                 <FaYoutube />
               </div>
 
-              <div className="icon-circle">
+              <div className="icon-circle" onClick={() => window.open("https://www.tiktok.com", "_blank")}
+  style={{ cursor: "pointer" }}
+>
                 <FaTiktok />
               </div>
             </div>

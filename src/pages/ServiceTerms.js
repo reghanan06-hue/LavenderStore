@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 export default function TermsOfService() {
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 550, behavior: "smooth" });
   }, []);
 
   return (

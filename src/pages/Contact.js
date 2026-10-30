@@ -7,8 +7,9 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+ useEffect(() => {
+    // Scroll vers le haut quand cette page est affichée
+    window.scrollTo({ top: 600, behavior: "smooth" });
   }, []);
 
   const handleSubmit = async (e) => {

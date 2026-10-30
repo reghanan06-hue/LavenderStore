@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from "react";
 import "../style/App.css";
 import { FaGoogle, FaFacebook } from "react-icons/fa";

@@ -8,6 +8,10 @@ export default function Story() {
   const [email, setEmail] = useState("");
   const [text, setText] = useState("");
   const [comments, setComments] = useState([]);
+ useEffect(() => {
+    // Scroll vers le haut quand cette page est affichée
+    window.scrollTo({ top: 600, behavior: "smooth" });
+  }, []);
 
   // Charger commentaires
   const fetchComments = async () => {
